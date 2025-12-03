@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" />
+    <title>Cat Breed Viewer</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cat-style.css') }}">
+</head>
+
+<body>
+    <div class="main-container">
+        <div>
+            <div class="header">
+                <h2 class="header-title">Cat Breed Viewer</h2>
+            </div>
+        </div>
+        <div>
+            <div class="dropdown-section">
+                <label class="form-label">
+                    <select id="breedSelect" class="breed-select">
+                        <option value="">Loading breeds...</option>
+                    </select>
+                </label>
+            </div>
+            <div class="image-viewer-section">
+                <div class="image-wrapper">
+                    <div id="catImage" class="cat-image">
+
+                    </div>
+                </div>
+            </div>
+            <div class="button-section">
+                <button id="showButton" class="show-button">
+                    <span class="truncate">Show Cat Image</span>
+                </button>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </div>
+
+    <!-- Message Box HTML -->
+    <div id="messageBoxOverlay" class="message-box-overlay">
+        <div class="message-box">
+            <p id="messageBoxText"></p>
+            <button id="messageBoxCloseButton" class="message-box-close-button">OK</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cat-script.js') }}"></script>
+</body>
+
+</html>

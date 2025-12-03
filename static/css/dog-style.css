@@ -1,0 +1,229 @@
+/* General Body Styles & Font */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Light Coffee Brown Background */
+    background: linear-gradient(135deg, #E6D7C3 0%, #DCC6A0 100%);
+    color: #30271C;
+    /* Dark Coffee for primary text */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container - Centering Magic! */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+    color: #39352E;
+    /* Charcoal Brown for the main heading */
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
+    max-width: 90%;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+/* Selection Container (Dropdown Area) */
+.selection-container {
+    margin-bottom: 30px;
+    background-color: #F5E6D3;
+    /* Lighter beige/cream for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(48, 39, 28, 0.15);
+    /* Dark Coffee shadow */
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    border: 1px solid #C8A985;
+}
+
+/* Breed Select Dropdown */
+.breed-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #30271C;
+    /* Dark Coffee border */
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #E6D7C3;
+    /* Matches background */
+    color: #30271C;
+    /* Dark Coffee text */
+    appearance: none;
+    /* Updated SVG for the dropdown arrow to be Dark Coffee */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2330271C%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.6c-5%200-9.3%201.8-13.2%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013.2l128%20128c3.9%203.9%208.2%205.4%2013.2%205.4s9.3-1.8%2013.2-5.4l128-128c3.6-3.6%205.4-7.8%205.4-13.2%200-5-1.8-9.3-5.4-13.2z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 0.6em auto;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+    font-weight: 600;
+}
+
+.breed-select:focus {
+    border-color: #CA844F;
+    /* Golden Chestnut for focus */
+    box-shadow: 0 0 0 3px rgba(202, 132, 79, 0.25);
+    outline: none;
+}
+
+.breed-select:disabled {
+    background-color: #dcdcdc;
+    color: #888;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: #aaa;
+}
+
+/* Selected Breed Display Area */
+.selected-breed-display {
+    margin-top: 30px;
+    background-color: #F5E6D3;
+    /* Lighter beige/cream */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(48, 39, 28, 0.2);
+    /* Dark Coffee shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    border: 1px solid #C8A985;
+}
+
+.selected-breed-display h2 {
+    color: #30271C;
+    /* Dark Coffee */
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Dog Image */
+.dog-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(48, 39, 28, 0.25);
+    object-fit: contain;
+    background-color: #E6D7C3;
+}
+
+.loading-image-text {
+    font-style: italic;
+    color: #39352E;
+    /* Charcoal Brown */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    background-color: #30271C;
+    /* Dark Coffee */
+    color: #EDA777;
+    /* Light Bronze text */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(48, 39, 28, 0.3);
+    width: auto;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #4A3C2A;
+    /* Slightly lighter Dark Coffee */
+    transform: translateY(-2px);
+    color: #FFF;
+}
+
+button:disabled {
+    background-color: #888;
+    color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Initial Message */
+.initial-message {
+    font-size: 1.1em;
+    color: #39352E;
+    /* Charcoal Brown */
+    margin-top: 40px;
+    max-width: 350px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Utility classes for showing/hiding elements */
+.hidden {
+    display: none !important;
+}
+
+/* Media Queries for Desktop/Larger Screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    .selection-container {
+        max-width: 450px;
+        padding: 25px;
+    }
+
+    .breed-select {
+        font-size: 1.1em;
+        padding: 14px 18px;
+    }
+
+    .selected-breed-display {
+        max-width: 550px;
+        padding: 40px;
+    }
+
+    .selected-breed-display h2 {
+        font-size: 2em;
+    }
+
+    .dog-image {
+        max-height: 500px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 1.1em;
+    }
+
+    .initial-message {
+        font-size: 1.3em;
+        max-width: 500px;
+    }
+}

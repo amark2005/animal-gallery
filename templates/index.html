@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Show</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title">Choose Your Companion</h1>
+        <div class="cards-container">
+            <a href="{{ url_for('dog') }}" class="card dog-card">
+                <div class="card-content">
+                    <h2>Good Boy Gallery</h2>
+                    <p>Explore the world of good boys.</p>
+                </div>
+            </a>
+            <a href="{{ url_for('cat') }}" class="card cat-card">
+                <div class="card-content">
+                    <h2>PawHub</h2>
+                    <p>Discover elegant felines.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
